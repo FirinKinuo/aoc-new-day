@@ -1,0 +1,45 @@
+package main
+
+import (
+	"fmt"
+	"log"
+
+	"github.com/FirinKinuo/advent-of-code"
+)
+
+type Day struct {
+	*problem.DayTemplate
+}
+
+func NewDay(inputType problem.InputType) (*Day, error) {
+	template, err := problem.NewDayTemplate("{{.Year}}", "{{.Day}}", inputType)
+	if err != nil {
+		return nil, fmt.Errorf("new day template: %w", err)
+	}
+	return &Day{DayTemplate: template}, nil
+}
+
+func (d *Day) PrepareInput(input string) {
+
+}
+
+func (d *Day) FirstProblem() int {
+	var result int
+
+	return result
+}
+
+func (d *Day) SecondProblem() int {
+	var result int
+
+	return result
+}
+
+func main() {
+	day, err := NewDay(problem.TestInput)
+	if err != nil {
+		log.Fatalf("new day: %s", err)
+	}
+
+	day.Problem.Solve(day)
+}
